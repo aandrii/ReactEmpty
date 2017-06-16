@@ -1,14 +1,19 @@
- var React = require('react');
+var React = require('react');
 
- require('./Note.css');
+require('./Note.css');
 
- var Note = React.createClass({
+var Note = React.createClass({
+   
+
     render: function() {
-        let stylM = { backgroundColor: this.props.color };
         return (
-            <div className="note" style={stylM}>
-                <span className="deleteNote" onClick={this.props.onDelete}> x </span>
-                {this.props.children}
+            <div className="noteEditor">                   
+                <textarea 
+                    placeholder="Enter you text" 
+                    rows={5} 
+                    className="textarea"                                            
+                />
+                <button className="addButton" >ADD</button>
             </div>
         );
     }
