@@ -3,17 +3,30 @@ var React = require('react');
 require('./Note.css');
 
 var Note = React.createClass({
-   
+    getInitialState: function() {
+        return {
+            text: "paragrapth"
+        };
+    },
 
-    render: function() {
+    handleChange: function(e) {
+        this.setState({
+            text: e.target.value
+        });
+    },
+
+    render: function() {       
+
         return (
             <div className="noteEditor">                   
                 <textarea 
                     placeholder="Enter you text" 
-                    rows={5} 
-                    className="textarea"                                            
+                    rows={3}
+                    cols={40} 
+                    className="textarea"  
+                    onChange={this.handleChange}                                          
                 />
-                <button className="addButton" >ADD</button>
+                <p>text {this.state.text}</p>                
             </div>
         );
     }

@@ -1,6 +1,13 @@
 .noteEditor{
-    border:  1px dotted gold; 
- 
+    border:  1px dotted gold; width: 100%;
+    max-width: 600px;
+    padding: 16px;
+    margin: 16px auto;   
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,0,0,0.05)
 }
 .textarea{
     width:100%;
@@ -10,29 +17,13 @@
     font-size: 14px;
     border: none;
     font-weight: 300;
+    background-color: white;
 }
-
-.addButton{
-    align-self: flex-end;
-     width: 100px;
-    background-color:#44c767;
-    border-radius:28px;
-    border:1px solid #18ab29;
-    cursor:pointer;
-    color:#ffffff;
-    font-size:14px;
-    padding:8px 8px;
-    text-transform: uppercase;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #2f6627;
-    outline: none;
+.textarea:focus {
+    outline: 0;
 }
-
-.addButton:hover {
-    background-color:#5cbf2a;
-}
-
-.addButton:active {
-    position:relative;
-    top:1px;
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -4,11 +4,10 @@ var Note = require('./Note.jsx')
 require('./App.css');
 
 var App = React.createClass({ 
-
+ 
     render: function() {
         return (
-            <div className="notesApp"> 
-                <h1>app</h1>
+            <div className="notesApp">                 
                 <Note />
             </div>
         );
