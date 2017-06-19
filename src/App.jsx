@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import './App.less';
+
 
 const App = React.createClass({
     render() {
         return (
-            <div>
+            <div className="app">
                 <div className='menuBar'> 
                      <div className="menuItem"> 
                         <Link to ="/">App</Link>

@@ -22,6 +22,11 @@ module.exports = {
                 loader: "style-loader!css-loader",
                 exclude: [/node_modules/, /public/]
             },
+             {
+                test: /\.less$/,
+                loader: "style-loader!css-loader!less-loader",
+                exclude: [/node_modules/, /public/]
+            },
             {
                 test: /\.gif$/,
                 loader: "url-loader?limit=10000&mimetype=image/gif"
